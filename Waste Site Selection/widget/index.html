@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="ut-8" />
+    <title>Registered Users</title>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.16/esri/themes/dark/main.css"
+    />
+    <script src="https://js.arcgis.com/4.16/"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="main.js"></script>
+    <script>
+      LoadMap();
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv">
+      <div id="app-title" class="esri-widget"></div>
+      <div
+        id="pin-button"        
+      >
+      </div>
+      <div
+        id="list-button"
+        class="esri-widget esri-widget--button esri-interactive"
+        title="users list"
+        onclick="DisplayMessages()"
+      >
+        <span class="esri-icon-drag-horizontal"></span>
+      </div>
+      
+    </div>
+  </body>
+</html>

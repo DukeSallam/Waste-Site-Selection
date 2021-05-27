@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User interface</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/dark/main.css"/>
+    <script src="https://js.arcgis.com/4.16/"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="app.js"></script>
+
+    <script>
+        LoadMap();
+    </script>
+    
+</head>
+
+<body>
+    <div id="viewDiv">
+      <div
+        id="pin-button"
+        class="esri-widget esri-widget--button esri-interactive"
+        title="Locate your location"
+      >
+        <span class="esri-icon-blank-map-pin"></span>
+      </div>
+      <div
+        id="list-button"
+        
+        onclick="DisplayMessages()"
+      >
+      </div>
+      <div id="app-search"  class="esri-widget">
+        <div>
+          <span
+            class="esri-icon-close"
+            id="closs-btn"
+            onclick="CloseForm()"
+          ></span>
+          <h4 id="form-header"> Fill The Form</h4>
+        </div>
+        <hr />
+        <input
+          type="text"
+          class="esri-input myinput"
+          id="txtName"
+          placeholder="Enter your name"
+        />
+        <br />
+        <input
+          type="text"
+          class="esri-input myinput"
+          id="txtPhone"
+          placeholder="Enter your phone"
+        />
+        <br />
+        <input
+          type="text"
+          class="esri-input myinput"
+          id="txtEmail"
+          placeholder="Enter your email"
+        />
+        <br />
+        <h6 id="FactoryType"> Factory Type </h6>
+        <br/>
+        <select id="FToption" class="esri-input myinput">
+          <option value="Extractor">Extractor</option>
+          <option value="Receiver">Receiver</option>
+          
+        </select>
+        <br/>
+
+        <h6 id="FactoryType"> Material Type</h6>
+        <br/>
+        <select id="WToption" class="esri-input myinput">
+          <option value="Iron">Iron</option>
+          <option value="Copper">Copper</option>
+          <option value="Aluminmum">Aluminmum</option>
+          <option value="Plastic">Plastic</option>
+
+        </select>
+        <br />
+        <textarea
+          id="txtMessage"
+          rows="4"
+          class="esri-input myinput"
+          placeholder="Enter your message"
+        ></textarea>
+        <hr />
+
+        <input
+          type="button"
+          class="esri-button myinput"
+          value="Send"
+          id="btnSend"
+          onclick="SendMessage()"
+        />
+      </div>
+    </div>
+    <div id="snackbar"></div>
+  </body>
